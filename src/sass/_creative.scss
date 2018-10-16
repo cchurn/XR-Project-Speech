@@ -1,0 +1,76 @@
+/**
+  This file is for styles specific to this creative build
+ */
+
+#creative_container {
+  position: relative;
+  background-color: #5d50ff;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+}
+.bt {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--one {
+    background-color: #21933b;
+    left: 10px;
+    bottom: 30px;
+  }
+  &--two {
+    background-color: #adcdff;
+    right: 10px;
+    bottom: 30px;
+  }
+}
+.testimage {
+  position: absolute;
+  bottom: 120px;
+  right: 20px;
+}
+.speech-bubble {
+  position: relative;
+  background: #f0f1ff;
+  border-radius: .4em;
+  color: #666;
+  padding: 12px;
+  box-sizing: border-box;
+  font-family: monospace;
+  opacity: 0;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 34px solid transparent;
+  border-top-color: #f0f1ff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -40%;
+  margin-bottom: -20px;
+}
+.output {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

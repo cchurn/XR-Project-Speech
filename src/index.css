@@ -1,0 +1,189 @@
+@font-face {
+  /*font-family: 'AndaleMono';
+  src: url('./fonts/AndaleMono.eot');
+  src: url('./fonts/AndaleMono.eot') format('embedded-opentype'),
+  url('./fonts/AndaleMono.woff2') format('woff2'),
+  url('./fonts/AndaleMono.woff') format('woff'),
+  url('./fonts/AndaleMono.svg') format('svg'),
+  url('./fonts/AndaleMono.ttf') format('truetype');
+  // font-weight: bold;
+  font-style: normal;*/ }
+
+body, html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #000;
+  overflow: hidden; }
+
+.rescale_reposition {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  left: 50% !important;
+  top: 50% !important;
+  transform-origin: top left !important;
+  overflow: hidden; }
+
+.bt_close {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 50px;
+  height: 50px;
+  z-index: 999999;
+  background-image: url("./img/close.png");
+  background-size: contain; }
+
+/**
+  This file is for styles specific to this creative build
+ */
+#creative_container {
+  position: relative;
+  background-color: #5d50ff;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+  #creative_container h1 {
+    font-size: 24px;
+    margin-bottom: 5px; }
+
+.bt {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .bt--one {
+    background-color: #21933b;
+    left: 10px;
+    bottom: 30px; }
+  .bt--two {
+    background-color: #adcdff;
+    right: 10px;
+    bottom: 30px; }
+
+.testimage {
+  position: absolute;
+  bottom: 120px;
+  right: 20px; }
+
+.speech-bubble {
+  position: relative;
+  background: #f0f1ff;
+  border-radius: .4em;
+  color: #666;
+  padding: 12px;
+  box-sizing: border-box;
+  font-family: monospace;
+  opacity: 0;
+  margin-bottom: 30px;
+  display: inline-block; }
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 34px solid transparent;
+  border-top-color: #f0f1ff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -40%;
+  margin-bottom: -20px; }
+
+.output {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+/**
+  The following are active on responsive creatives only
+ */
+.bt {
+  width: 200px;
+  height: 50px;
+  background: rgba(88, 150, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.portrait .rescale_reposition {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.landscape .rescale_reposition {
+  background-image: url("./img/rotate_ico.png");
+  background-size: auto;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .landscape .rescale_reposition canvas {
+    display: none; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #eee;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: center; }
+  .container .col {
+    display: inline-block;
+    width: 46%;
+    margin: 0 1%;
+    vertical-align: top; }
+  .container textarea {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px; }
+  .container select {
+    width: 49%;
+    margin-top: 10px; }
+  .container button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer; }
+    .container button.translate {
+      background: green; }
+    .container button.detect {
+      background: blue; }
+  .container h2 {
+    display: none;
+    margin: 0; }
+  .container p.target {
+    display: none;
+    margin-top: 0;
+    padding: 10px;
+    border: 1px solid #ccc; }

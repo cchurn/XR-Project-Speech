@@ -1,0 +1,30 @@
+{
+  "name": "Formats2.0-Starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@google-cloud/translate": "^2.1.2",
+    "gapi-client": "0.0.3",
+    "google-translate-api": "^2.3.0",
+    "gsap": "^2.0.2",
+    "jquery": "^3.3.1",
+    "lazyload-css": "^1.0.4",
+    "load-js": "^3.0.3",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.1.5",
+    "tinypng-webpack-plugin": "^1.0.1",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "zip-webpack-plugin": "^2.1.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build"
+  },
+  "homepage": "."
+}

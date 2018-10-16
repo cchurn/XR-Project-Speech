@@ -1,0 +1,104 @@
+@import 'sass/mixins';
+@import 'sass/fonts';
+@import 'sass/general';
+@import 'sass/creative';
+
+/**
+  The following are active on responsive creatives only
+ */
+.bt {
+  width: 200px;
+  height: 50px;
+  background: rgba(88, 150, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portrait {
+  .rescale_reposition {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+.landscape {
+  .rescale_reposition {
+    background-image: url("./img/rotate_ico.png");
+    background-size: auto;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    // example hide elements you don't want on rotation
+    canvas {
+      display: none;
+    }
+  }
+}
+//
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #eee;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+
+  .col {
+    display: inline-block;
+    width: 46%;
+    margin: 0 1%;
+    vertical-align: top;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  select {
+    width: 49%;
+    margin-top: 10px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.translate {
+      background: green;
+    }
+    &.detect {
+      background: blue;
+    }
+  }
+
+  h2 {
+    display: none;
+    margin: 0;
+  }
+
+  p.target {
+    display: none;
+    margin-top: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+}

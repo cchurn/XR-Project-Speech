@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+  <meta name="ad.frame" content="child">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <script src="https://apis.google.com/js/api.js"></script>
+  <title>Creative</title>
+</head>
+<body style="opacity: 0">
+<div id="creative_container">
+  <div class="bt">Tap to talk</div>
+  <div class="speech1 speech-bubble"><span class="flag"></span><div class="speech"></div></div>
+  <div class="speech2 speech-bubble"><span class="flag"></span><div class="speech"></div></div>
+  <div class="speech3 speech-bubble"><span class="flag"></span><div class="speech"></div></div>
+  <div class="speech4 speech-bubble"><span class="flag"></span><div class="speech"></div></div>
+  <div class="speech5 speech-bubble"><span class="flag"></span><div class="speech"></div></div>
+  <div>
+    <p class="phrase"></p>
+    <p class="result"></p>
+    <div class="output"></div>
+  </div>
+</div>
+<!--<div class="bt_close"></div>-->
+<script>
+    function init() {
+        /**
+         * Creative is created on window in index.js
+         * Set width and height if responsive is true
+         * container: string, responsive: boolean, width: number, height: number, lazyLoad: array
+         */
+        let configObj = {
+            container:'#creative_container',
+            responsive: true,
+            width: 320, height: 568,
+            lazyLoad: ['https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js']
+        };
+        Creative.init(configObj);
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+            init();
+        });
+</script>
+</body>
+</html>
