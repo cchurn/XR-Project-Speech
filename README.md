@@ -3,7 +3,9 @@
 
 Voice recognition and translation
 
-Demo (best on mobile and portrait aspect)
+Demo (best on mobile and portrait aspect) 
+
+Supported browsers: Chrome, Edge and Firefox 
 
 https://s3-eu-west-1.amazonaws.com/cs-international/xrproject-speech/index.html
 

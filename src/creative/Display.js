@@ -11,6 +11,13 @@ const endpoints = {
 };
 var speech1, speech2, speech3, speech4;
 var idx = 0;
+var synth = window.speechSynthesis;
+var voices = {
+    en: {voiceURI: "Daniel", name: "Daniel", lang: "en-GB", localService: true, default: true}
+}
+var utterThis = new SpeechSynthesisUtterance('hello there');
+utterThis.voice = voices.en;
+synth.speak(utterThis);
 class Display extends EventEmitter {
     init(config) {
         // start here
